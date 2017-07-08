@@ -1,0 +1,9 @@
+language: node_js
+node_js:
+    - "7"
+before_install:
+    - "node --version"
+services:
+    - mongodb
+env:
+    - ENV_OPTS=0
