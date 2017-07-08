@@ -1,0 +1,116 @@
+<template lang="pug">
+  .wrapper
+    sidebar
+    .main-panel
+      navigation
+      .content
+        router-view
+      md-footer
+</template>
+
+<script>
+import './assets/js/jquery-3.1.0.min'
+import './assets/js/material.min'
+
+import Navigation from '@/components/Navigation'
+import MdFooter from '@/components/Footer'
+import Sidebar from '@/components/Sidebar'
+
+export default {
+  name: 'app',
+  components: {
+    Navigation,
+    MdFooter,
+    Sidebar
+  },
+
+  mounted() {
+    this.initMaterial()
+  },
+
+  updated() {
+    this.initMaterial()
+  },
+
+  methods: {
+    initMaterial() {
+      $.material.init() // eslint-disable-line
+    }
+  }
+}
+</script>
+
+<style lang="scss">
+@import "./assets/sass/md/_variables.scss";
+
+.table {
+  thead {
+    th {
+      font-weight: $headings-font-weight;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .typo-line {
+    padding-left: 140px;
+    margin-bottom: 40px;
+    position: relative;
+    .category {
+      transform: translateY(-50%);
+      top: 50%;
+      left: 0px;
+      position: absolute;
+    }
+  }
+}
+
+#map {
+  position: relative;
+  width: 100%;
+  height: calc(100% - 60px);
+  margin-top: 70px;
+}
+
+.places-buttons .btn {
+  margin-bottom: 30px
+}
+
+.space-70 {
+  height: 70px;
+  display: block;
+}
+
+.sidebar .nav>li.active-pro {
+  position: absolute;
+  width: 100%;
+  bottom: 10px;
+}
+
+.tim-row {
+  margin-bottom: 20px;
+  padding-top: 50px;
+  h3 {
+    margin-top: 0;
+  }
+}
+
+.tim-typo {
+  padding-left: 25%;
+  margin-bottom: 40px;
+  position: relative;
+  .tim-note {
+    bottom: 10px;
+    color: #c0c1c2;
+    display: block;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 13px;
+    left: 0;
+    margin-left: 20px;
+    position: absolute;
+    width: 260px;
+  }
+}
+</style>
+
