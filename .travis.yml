@@ -20,4 +20,5 @@ services:
     - mongodb
 env:
     - ENV_OPTS=0
+group: deprecated-2017Q2
 os: linux
