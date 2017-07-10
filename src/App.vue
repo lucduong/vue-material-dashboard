@@ -9,9 +9,6 @@
 </template>
 
 <script>
-import './assets/js/jquery-3.1.0.min'
-import './assets/js/material.min'
-
 import Navigation from '@/components/Navigation'
 import MdFooter from '@/components/Footer'
 import Sidebar from '@/components/Sidebar'

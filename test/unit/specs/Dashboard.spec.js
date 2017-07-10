@@ -5,7 +5,7 @@ describe('Dashboard.vue', () => {
   it('should render correct contents', () => {
     const Constructor = Vue.extend(Dashboard)
     const vm = new Constructor().$mount()
-    expect(vm.$el.querySelector('a.navbar-brand').textContent)
-      .to.equal('Dashboard')
+    expect(vm.$el.querySelectorAll('.row').length)
+      .to.equal(3)
   })
 })
