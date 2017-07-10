@@ -29,8 +29,13 @@
           |  Just Updated
   .row
     .col-md-4
-      md-widget(type='chart', backgroundColor='green', title='Daily Sales', chartId='dailySalesChart')
-        div(slot='content')
+      md-chart-widget(type='Line', 
+                      backgroundColor='green', 
+                      title='Daily Sales', 
+                      id='dailySalesChart',
+                      :options='dailySalesChart.options',
+                      :data='dailySalesChart.data')
+        div(slot='subTitle')
           span.text-success
             i.fa.fa-long-arrow-up
             |  55%
@@ -39,20 +44,29 @@
           i.material-icons access_time
           |  updated 4 minutes ago
     .col-md-4
-      md-widget(type='chart', backgroundColor='orange', title='Email Subscriptions', chartId='emailsSubscriptionChart')
-        div(slot='content')
+      md-chart-widget(type='Bar', 
+                      backgroundColor='orange', 
+                      title='Email Subscriptions', 
+                      id='emailsSubscriptionChart',
+                      :options='emailsSubscriptionChart.options',
+                      :data='emailsSubscriptionChart.data')
+        div(slot='subTitle')
           | Last Campaign Performance
         div(slot='footer')
           i.material-icons access_time
           |  campaign sent 2 days ago
     .col-md-4
-      md-widget(type='chart', backgroundColor='red', title='Completed Tasks', chartId='emailsSubscriptionChart')
-        div(slot='content')
+      md-chart-widget(type='Line', 
+                      backgroundColor='red', 
+                      title='Completed Tasks', 
+                      id='completedTasksChart',
+                      :options='completedTasksChart.options',
+                      :data='completedTasksChart.data')
+        div(slot='subTitle')
           | Last Campaign Performance
         div(slot='footer')
           i.material-icons access_time
           |  campaign sent 2 days ago
- 
   .row
     .col-lg-6.col-md-12
       md-card.card-nav-tabs(backgroundColor='purple')
@@ -215,12 +229,58 @@ export default {
   },
 
   data() {
+    const lineSmooth = this.$Chartist.Interpolation.cardinal({ tension: 0 })
     return {
       tabs: [
         { id: 'home', name: 'Home', icon: 'bug_report', active: true },
         { id: 'website', name: 'Website', icon: 'code', active: false },
         { id: 'server', name: 'Server', icon: 'cloud', active: false }
-      ]
+      ],
+      dailySalesChart: {
+        data: {
+          labels: ['M', 'T', 'W', 'T', 'F', 'S', 'S'],
+          series: [
+            [12, 17, 7, 17, 23, 18, 38]
+          ]
+        },
+        options: {
+          lineSmooth: lineSmooth,
+          low: 0,
+          high: 50, // creative tim: we recommend you to set the high sa the biggest value + something for a better look
+          chartPadding: { top: 0, right: 0, bottom: 0, left: 0 }
+        }
+      },
+      emailsSubscriptionChart: {
+        data: {
+          labels: ['Jan', 'Feb', 'Mar', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+          series: [
+            [542, 443, 320, 780, 553, 453, 326, 434, 568, 610, 756, 895]
+
+          ]
+        },
+        options: {
+          axisX: {
+            showGrid: false
+          },
+          low: 0,
+          high: 1000,
+          chartPadding: { top: 0, right: 5, bottom: 0, left: 0 }
+        }
+      },
+      completedTasksChart: {
+        data: {
+          labels: ['12am', '3pm', '6pm', '9pm', '12pm', '3am', '6am', '9am'],
+          series: [
+            [230, 750, 450, 300, 280, 240, 200, 190]
+          ]
+        },
+        options: {
+          lineSmooth: lineSmooth,
+          low: 0,
+          high: 1000, // creative tim: we recommend you to set the high sa the biggest value + something for a better look
+          chartPadding: { top: 0, right: 0, bottom: 0, left: 0 }
+        }
+      }
     }
   },
 
