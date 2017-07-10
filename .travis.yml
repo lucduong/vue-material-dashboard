@@ -20,5 +20,4 @@ services:
     - mongodb
 env:
     - ENV_OPTS=0
-group: stable
 os: linux
