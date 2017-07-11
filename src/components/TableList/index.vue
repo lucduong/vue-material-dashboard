@@ -1,11 +1,12 @@
 <template lang="pug">
-.row
-  .col-md-12
-    md-card(title='Simple Table', category='Here is a subtitle for this table', backgroundColor='purple')
-      md-table(:data='table1.data', :columns='table1.columns')
-  .col-md-12
-    md-card.card-plain(title='Table on Plain Background', category='Here is a subtitle for this table', backgroundColor='purple')
-      md-table(type='hover', :data='table2.data', :columns='table2.columns')
+.content
+  .row
+    .col-md-12
+      md-card(title='Simple Table', category='Here is a subtitle for this table', backgroundColor='purple')
+        md-table(:data='table1.data', :columns='table1.columns')
+    .col-md-12
+      md-card.card-plain(title='Table on Plain Background', category='Here is a subtitle for this table', backgroundColor='purple')
+        md-table(type='hover', :data='table2.data', :columns='table2.columns')
 </template>
 
 <script>

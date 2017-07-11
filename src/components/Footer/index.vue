@@ -18,8 +18,12 @@ footer.footer
     p.copyright.pull-right
       | © 
       | {{year}}&nbsp;
+      | Crafted with&nbsp;
+      i.fa.fa-heart.heart
+      | &nbsp;by&nbsp;
+      a(href='https://github.com/lucduong') Luc Duong.&nbsp;
+      | Designed by&nbsp;
       a(href='http://www.creative-tim.com') Creative Tim
-      | , made with love for a better web
 </template>
 <script>
 export default {
@@ -30,4 +34,9 @@ export default {
   }
 }
 </script>
+<style lang="scss">
+.footer .heart {
+  color: #EB5E28;
+}
+</style>
 

@@ -1,10 +1,10 @@
 <template lang="pug">
+#app
   .wrapper
     sidebar
     .main-panel
       navigation
-      .content
-        router-view
+      router-view
       md-footer
 </template>
 
@@ -60,13 +60,6 @@ export default {
       position: absolute;
     }
   }
-}
-
-#map {
-  position: relative;
-  width: 100%;
-  height: calc(100% - 60px);
-  margin-top: 70px;
 }
 
 .places-buttons .btn {

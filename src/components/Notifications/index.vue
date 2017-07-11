@@ -1,4 +1,5 @@
 <template lang="pug">
+.content
   h1 Comming Soon
 </template>
 
