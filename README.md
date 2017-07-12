@@ -1,3 +1,7 @@
+<p align='center'>
+<a href="https://circleci.com/gh/lucduong/vue-material-dashboard.svg?style=svg"><img src="https://img.shields.io/circleci/project/vuejs/vue/dev.svg" alt="Build Status"></a>
+</p>
+
 # vue-material-dashboard
 
 > Vue Material Dashboard - Inspired by Material Dashboard of Creative Tim.
