@@ -1,12 +1,13 @@
 <template lang="pug">
 #app
-  .wrapper
-    sidebar
+  .wrapper(:class="{ 'nav-open' : navOpened }")
+    sidebar(:open='navOpened')
     md-notifications
     .main-panel
-      navigation
+      navigation(@toggleSideBar='toggleSideBar')
       router-view
       md-footer
+      .close-layer(v-if='navOpened', @click='onCloseLayerClick')
 </template>
 
 <script>
@@ -22,6 +23,18 @@ export default {
     Sidebar
   },
 
+  data() {
+    return {
+      sidebarToggled: false
+    }
+  },
+
+  computed: {
+    navOpened() {
+      return this.sidebarToggled
+    }
+  },
+
   mounted() {
     this.initMaterial()
   },
@@ -33,6 +46,12 @@ export default {
   methods: {
     initMaterial() {
       $.material.init() // eslint-disable-line
+    },
+    toggleSideBar() {
+      this.sidebarToggled = !this.sidebarToggled
+    },
+    onCloseLayerClick() {
+      this.toggleSideBar()
     }
   }
 }
