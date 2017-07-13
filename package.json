@@ -17,6 +17,7 @@
     "bootstrap": "^3.3.7",
     "chartist": "^0.11.0",
     "pug": "^2.0.0-rc.2",
+    "v-click-outside": "^0.0.8",
     "vue": "^2.3.3",
     "vue-router": "^2.3.1"
   },
