@@ -4,6 +4,8 @@
     a.simple-text(href='http://www.creative-tim.com')
       | Creative Tim
   .sidebar-wrapper
+    navbar-search(v-if='open')
+    navbar-right(v-if='open', :mobile='true')
     ul.nav
       item(title='Dashboard', icon='dashboard', href='/')
       item(title='User Profile', icon='person', href='person')
@@ -20,10 +22,17 @@
 </template>
 <script>
 import Item from './item'
+import NavbarSearch from '@/components/Navigation/navbar-search'
+import NavbarRight from '@/components/Navigation/navbar-right'
 
 export default {
+  props: {
+    open: Boolean
+  },
   components: {
-    Item
+    Item,
+    NavbarSearch,
+    NavbarRight
   }
 }
 </script>
