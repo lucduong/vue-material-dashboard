@@ -22,7 +22,7 @@ function getRenderedComponent(Component, propsData) {
 describe('Dashboard.vue', () => {
   it('should contains 4 stats cards and 3 chart cards', () => {
     const vm = getRenderedComponent(Dashboard)
-    const statsCards = vm.$children.filter((child) => child.$options.name === 'md-widget').length
+    const statsCards = vm.$children.filter((child) => child.$options.name === 'md-stats-widget').length
     const chartCards = vm.$children.filter((child) => child.$options.name === 'md-chart-widget').length
     expect(statsCards).to.equal(4)
     expect(chartCards).to.equal(3)

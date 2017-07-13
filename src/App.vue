@@ -2,6 +2,7 @@
 #app
   .wrapper
     sidebar
+    md-notifications
     .main-panel
       navigation
       router-view
