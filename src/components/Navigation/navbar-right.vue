@@ -1,7 +1,7 @@
 <template lang="pug">
 ul.nav(:class='navClasses')
   li
-    a.dropdown-toggle(href='#pablo', data-toggle='dropdown')
+    router-link.dropdown-toggle(to='/', data-toggle='dropdown')
       i.material-icons dashboard
       p.hidden-lg.hidden-md Dashboard
   li.dropdown
@@ -21,7 +21,7 @@ ul.nav(:class='navClasses')
       li
         a(href='#') Another One
   li
-    a.dropdown-toggle(href='#pablo', data-toggle='dropdown')
+    a.dropdown-toggle(href='#', data-toggle='dropdown')
       i.material-icons person
       p.hidden-lg.hidden-md Profile
 </template>

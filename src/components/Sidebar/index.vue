@@ -14,7 +14,7 @@
       item(title='Icons', icon='bubble_chart', href='icons')
       item(title='Maps', icon='location_on', href='maps')
       item(title='Notifications', icon='notifications', href='notifications')
-      li.active-pro
+      li(:class='{ "active-pro" : !open }')
         a(href='upgrade.html')
           i.material-icons unarchive
           p Upgrade to PRO
