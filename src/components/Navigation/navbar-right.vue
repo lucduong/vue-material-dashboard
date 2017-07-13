@@ -4,8 +4,8 @@ ul.nav(:class='navClasses')
     router-link.dropdown-toggle(to='/', data-toggle='dropdown')
       i.material-icons dashboard
       p.hidden-lg.hidden-md Dashboard
-  li.dropdown
-    a.dropdown-toggle(href='#', data-toggle='dropdown')
+  li.dropdown(:class='{ open : isDropdownOpened }', v-click-outside='closeDropdown')
+    a.dropdown-toggle(href='#', data-toggle='dropdown', @click='openDropdown')
       i.material-icons notifications
       span.notification 5
       p.hidden-lg.hidden-md Notifications
@@ -31,9 +31,24 @@ export default {
   props: {
     mobile: Boolean
   },
+  data() {
+    return {
+      isDropdownOpened: false
+    }
+  },
   computed: {
     navClasses() {
       return this.mobile ? ['nav-mobile-menu'] : ['navbar-nav', 'navbar-right']
+    }
+  },
+  methods: {
+    openDropdown() {
+      this.isDropdownOpened = true
+    },
+    closeDropdown() {
+      if (this.isDropdownOpened) {
+        this.isDropdownOpened = false
+      }
     }
   }
 }

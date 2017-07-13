@@ -1,10 +1,20 @@
 <p align='center'>
 <a href="https://circleci.com/gh/lucduong/vue-material-dashboard"><img src="https://circleci.com/gh/lucduong/vue-material-dashboard.svg?style=svg" alt="Build Status"></a>
+<a href="/CHANGELOG.md"><img src="https://img.shields.io/badge/version-1.0.0-blue.svg" alt="Version"></a>
+<a href="/LICENCSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License"></a>
 </p>
 
 # vue-material-dashboard
 
 > Vue Material Dashboard - Inspired by Material Dashboard of Creative Tim.
+
+This project is using `Vue 2` and based on HTML version of [Material Dashboard](https://www.creative-tim.com/product/material-dashboard) which designed by [Creative Tim](https://www.creative-tim.com/)
+
+Check the [LIVE DEMO HERE](http://vue-material-dashboard.ltv.vn/) or [HEROKU HERE](https://vue-material-dashboard.herokuapp.com/)
+
+<p align='center'>
+<img src="/static/vue-material-dashboard-1.png" alt="Screenshot">
+</p>
 
 ## Build Setup
 
@@ -32,3 +42,4 @@ npm test
 ```
 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
