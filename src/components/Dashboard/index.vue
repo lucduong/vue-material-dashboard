@@ -3,27 +3,27 @@
   .container-fluid
     .row
       .col-lg-3.col-md-6.col-sm-6
-        md-widget(type='statistics', icon='content_copy', backgroundColor='orange', title='Used Space')
+        md-stats-widget(icon='content_copy', backgroundColor='orange', title='Used Space')
           div(slot='content')
             | 49/50
             small GB
           div(slot='footer')
             i.material-icons.text-danger warning
-            router-link(tag='a', to='dashboard', active-class="active", exact) Get More Space...
+            router-link(to='Dashboard') Get More Space...
       .col-lg-3.col-md-6.col-sm-6
-        md-widget(type='statistics', icon='warning', backgroundColor='green', title='Revenue')
+        md-stats-widget(icon='warning', backgroundColor='green', title='Revenue')
           div(slot='content') $34,245
           div(slot='footer')
             i.material-icons date_range
             |  Last 24 Hours
       .col-lg-3.col-md-6.col-sm-6
-        md-widget(type='statistics', icon='info_outline', backgroundColor='red', title='Fixed Issues')
+        md-stats-widget(icon='info_outline', backgroundColor='red', title='Fixed Issues')
           div(slot='content') 75
           div(slot='footer')
             i.material-icons local_offer
             |  Tracked from Github
       .col-lg-3.col-md-6.col-sm-6
-        md-widget(type='statistics', faIcon='fa-twitter', backgroundColor='blue', title='Followers')
+        md-stats-widget(faIcon='fa-twitter', backgroundColor='blue', title='Followers')
           div(slot='content') +245
           div(slot='footer')
             i.material-icons update

@@ -10,7 +10,8 @@
                     @onClose='removeNotification(index)')
 </template>
 <script>
-import MdNotification from '../MdNotification'
+import MdNotification from '@/core/components/mdNotification'
+
 export default {
   name: 'md-notifications',
   components: {

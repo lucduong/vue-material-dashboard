@@ -1,4 +1,4 @@
-import MdNotifications from './MdNotifications'
+import MdNotifications from './index'
 
 const NotificationStore = {
   state: [],

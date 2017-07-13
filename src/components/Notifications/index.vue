@@ -81,7 +81,7 @@
 </template>
 
 <script>
-import MdNotification from '@/core/components/MdNotification'
+import MdNotification from '@/core/components/mdNotification'
 export default {
   components: {
     MdNotification

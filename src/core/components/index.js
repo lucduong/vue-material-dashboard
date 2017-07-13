@@ -2,7 +2,7 @@ import MdButon from './mdButton'
 import MdCard from './mdCard'
 import MdFormGroupInput from './mdFormGroupInput'
 import MdTab from './mdTab'
-import MdWidget from './mdWidget'
+import MdStatsWidget from './mdStatsWidget'
 import MdTable from './mdTable'
 import MdBlockquote from './mdBlockquote'
 import MdChartWidget from './mdChartWidget'
@@ -13,7 +13,7 @@ export default {
     Vue.component(MdCard.name, MdCard)
     Vue.component(MdFormGroupInput.name, MdFormGroupInput)
     Vue.component(MdTab.name, MdTab)
-    Vue.component(MdWidget.name, MdWidget)
+    Vue.component(MdStatsWidget.name, MdStatsWidget)
     Vue.component(MdTable.name, MdTable)
     Vue.component(MdBlockquote.name, MdBlockquote)
     Vue.component(MdChartWidget.name, MdChartWidget)

@@ -10,7 +10,7 @@
   a(v-if='!!url', href='url', target='target', data-notify='url')
 </template>
 <script>
-import { EVENT_ON_CLOSE } from './constants'
+const EVENT_ON_CLOSE = 'onClose'
 
 export default {
   name: 'md-notification',
