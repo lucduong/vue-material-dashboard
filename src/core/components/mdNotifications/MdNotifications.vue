@@ -1,11 +1,18 @@
 <template lang='pug'>
 .notifications
   transition-group(name='list')
-    notification(v-for='(n,index) in notifications', :key='n', :message='n.message', :icon='n.icon', :type='n.type', :vertical-align='n.verticalAlign', :horizontal-align='n.horizontalAlign', @onClose='removeNotification(index)')
+    md-notification(v-for='(n,index) in notifications', 
+                    :key='n', 
+                    :message='n.message', 
+                    :icon='n.icon', 
+                    :type='n.type', 
+                    :placement='n.placement'
+                    @onClose='removeNotification(index)')
 </template>
 <script>
-import MdNotification from './index'
+import MdNotification from '../MdNotification'
 export default {
+  name: 'md-notifications',
   components: {
     MdNotification
   },
@@ -22,7 +29,7 @@ export default {
 }
 
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 .list-item {
   display: inline-block;
   margin-right: 10px;

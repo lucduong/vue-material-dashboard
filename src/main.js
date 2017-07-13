@@ -10,7 +10,7 @@ import './assets/sass/material-dashboard.scss'
 import 'es6-promise/auto'
 import Chartist from 'chartist'
 import CoreComponents from '@/core/components'
-import Notification from '@/core/components/mdNotification'
+import MdNotifications from '@/core/components/MdNotifications'
 
 Vue.config.productionTip = false
 
@@ -23,7 +23,7 @@ Object.defineProperty(Vue.prototype, '$Chartist', {
 
 // Use Core Components
 Vue.use(CoreComponents)
-Vue.use(Notification)
+Vue.use(MdNotifications)
 
 /* eslint-disable no-new */
 new Vue({

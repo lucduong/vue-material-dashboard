@@ -1,4 +1,4 @@
-import Notifications from './Notifications'
+import MdNotifications from './MdNotifications'
 
 const NotificationStore = {
   state: [],
@@ -17,6 +17,6 @@ export default {
         return NotificationStore
       }
     })
-    Vue.component('Notifications', Notifications)
+    Vue.component('MdNotifications', MdNotifications)
   }
 }

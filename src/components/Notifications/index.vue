@@ -81,29 +81,27 @@
 </template>
 
 <script>
-import MdNotification from '@/core/components/MdNotification/Notification'
+import MdNotification from '@/core/components/MdNotification'
 export default {
   components: {
     MdNotification
   },
   data() {
     return {
-      type: ['', 'info', 'success', 'warning', 'danger'],
-      notifications: {
-        topCenter: false
-      }
+      type: ['', 'primary', 'info', 'success', 'warning', 'danger']
     }
   },
   methods: {
-    showNotification(vAlign, hAlign) {
-      console.log(`showNotification: `, vAlign, hAlign)
-      var color = Math.floor((Math.random() * 4) + 1)
+    showNotification(from, align) {
+      const color = Math.floor((Math.random() * 5) + 1)
       this.$notifications.notify({
-        message: 'Welcome to <b>Material Dashboard</b> - a beautiful freebie for every web developer.',
+        type: this.type[color],
         icon: 'notifications',
-        horizontalAlign: hAlign,
-        verticalAlign: vAlign,
-        type: this.type[color]
+        message: 'Welcome to <b>Material Dashboard</b> - a beautiful freebie for every web developer.',
+        placement: {
+          from,
+          align
+        }
       })
     }
   }
