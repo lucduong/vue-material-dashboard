@@ -5,7 +5,7 @@ ul.nav(:class='navClasses')
       i.material-icons dashboard
       p.hidden-lg.hidden-md Dashboard
   li.dropdown(:class='{ open : isDropdownOpened }', v-click-outside='closeDropdown')
-    a.dropdown-toggle(href='#', data-toggle='dropdown', @click='openDropdown')
+    a.dropdown-toggle(href='#', data-toggle='dropdown', @click.prevent='openDropdown')
       i.material-icons notifications
       span.notification 5
       p.hidden-lg.hidden-md Notifications
@@ -43,7 +43,7 @@ export default {
   },
   methods: {
     openDropdown() {
-      this.isDropdownOpened = true
+      this.isDropdownOpened = !this.isDropdownOpened
     },
     closeDropdown() {
       if (this.isDropdownOpened) {
