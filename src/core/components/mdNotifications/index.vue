@@ -1,12 +1,12 @@
 <template lang='pug'>
 .notifications
   transition-group(name='list')
-    md-notification(v-for='(n,index) in notifications', 
-                    :key='n', 
-                    :message='n.message', 
-                    :icon='n.icon', 
-                    :type='n.type', 
-                    :placement='n.placement'
+    md-notification(v-for='(n,index) in notifications',
+                    :key='n',
+                    :message='n.message',
+                    :icon='n.icon',
+                    :type='n.type',
+                    :placement='n.placement',
                     @onClose='removeNotification(index)')
 </template>
 <script>

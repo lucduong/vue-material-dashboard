@@ -1,6 +1,6 @@
 <template lang="pug">
 ul.md-nav-tabs.nav.nav-tabs(role='tablist')
-  nav-tab(v-if='!hasDefaultSlot' v-for='t in tabs', :key='t.id', :id='t.id', :name='t.name', :active='t.active', :icon='t.icon' @onTabClick='onTabClick')
+  nav-tab(v-if='!hasDefaultSlot' v-for='t in tabs', :key='t.id', :id='t.id', :name='t.name', :active='t.active', :icon='t.icon', @onTabClick='onTabClick')
   slot
 </template>
 
