@@ -1,56 +1,58 @@
-<template lang="pug">
-ul.nav(:class='navClasses')
-  li
-    router-link.dropdown-toggle(to='/', data-toggle='dropdown')
-      i.material-icons dashboard
-      p.hidden-lg.hidden-md Dashboard
-  li.dropdown(:class='{ open : isDropdownOpened }', v-click-outside='closeDropdown')
-    a.dropdown-toggle(href='#', data-toggle='dropdown', @click.prevent='openDropdown')
-      i.material-icons notifications
-      span.notification 5
-      p.hidden-lg.hidden-md Notifications
-    ul.dropdown-menu
-      li
-        a(href='#') Mike John responded to your email
-      li
-        a(href='#') You have 5 new tasks
-      li
-        a(href='#') You're now friend with Andrew
-      li
-        a(href='#') Another Notification
-      li
-        a(href='#') Another One
-  li
-    a.dropdown-toggle(href='#', data-toggle='dropdown')
-      i.material-icons person
-      p.hidden-lg.hidden-md Profile
+<template>
+  <ul class="nav" :class="navClasses">
+    <li>
+      <router-link class="dropdown-toggle" to="/" data-toggle="dropdown"><i class="material-icons">dashboard</i>
+        <p class="hidden-lg hidden-md">Dashboard</p>
+      </router-link>
+    </li>
+    <li class="dropdown" :class="{ open : isDropdownOpened }" v-click-outside="closeDropdown">
+      <a class="dropdown-toggle" href="#" data-toggle="dropdown" @click.prevent="openDropdown">
+        <i class="material-icons">notifications</i>
+        <span class="notification">5</span>
+        <p class="hidden-lg hidden-md">Notifications</p>
+      </a>
+      <ul class="dropdown-menu">
+        <li><a href="#">Mike John responded to your email</a></li>
+        <li><a href="#">You have 5 new tasks</a></li>
+        <li><a href="#">You're now friend with Andrew</a></li>
+        <li><a href="#">Another Notification</a></li>
+        <li><a href="#">Another One</a></li>
+      </ul>
+    </li>
+    <li>
+      <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        <i class="material-icons">person</i>
+        <p class="hidden-lg hidden-md">Profile</p>
+      </a>
+    </li>
+  </ul>
 </template>
 <script>
-export default {
-  name: 'navbar-right',
-  props: {
-    mobile: Boolean
-  },
-  data() {
-    return {
-      isDropdownOpened: false
-    }
-  },
-  computed: {
-    navClasses() {
-      return this.mobile ? ['nav-mobile-menu'] : ['navbar-nav', 'navbar-right']
-    }
-  },
-  methods: {
-    openDropdown() {
-      this.isDropdownOpened = !this.isDropdownOpened
+  export default {
+    name: 'navbar-right',
+    props: {
+      mobile: Boolean
     },
-    closeDropdown() {
-      if (this.isDropdownOpened) {
-        this.isDropdownOpened = false
+    data() {
+      return {
+        isDropdownOpened: false
+      }
+    },
+    computed: {
+      navClasses() {
+        return this.mobile ? ['nav-mobile-menu'] : ['navbar-nav', 'navbar-right']
+      }
+    },
+    methods: {
+      openDropdown() {
+        this.isDropdownOpened = !this.isDropdownOpened
+      },
+      closeDropdown() {
+        if (this.isDropdownOpened) {
+          this.isDropdownOpened = false
+        }
       }
     }
   }
-}
 </script>
 

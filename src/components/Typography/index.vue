@@ -1,85 +1,74 @@
-<template lang="pug">
-.content
-  .container-fluid
-    .row
-      .col-md-12
-        .card
-          .card-header(data-background-color='purple')
-            h4.title Material Dashboard Heading
-            p.category Created using Roboto Font Family
-          .card-content
-            #typography
-              .title
-                h2 Typography
-              .row
-                .tim-typo
-                  h1
-                    span.tim-note Header 1
-                    | The Life of Material Dashboard
-                .tim-typo
-                  h2
-                    span.tim-note Header 2
-                    | The life of Material Dashboard
-                .tim-typo
-                  h3
-                    span.tim-note Header 3
-                    | The life of Material Dashboard
-                .tim-typo
-                  h4
-                    span.tim-note Header 4
-                    | The life of Material Dashboard
-                .tim-typo
-                  h5
-                    span.tim-note Header 5
-                    | The life of Material Dashboard
-                .tim-typo
-                  h6
-                    span.tim-note Header 6
-                    | The life of Material Dashboard
-                .tim-typo
-                  p
-                    span.tim-note Paragraph
-                    | I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus. I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at.
-                .tim-typo
-                  span.tim-note Quote
-                  md-blockquote(author='Kanye West, Musician', content='I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus. I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at.')
-                .tim-typo
-                  span.tim-note Muted Text
-                  p.text-muted
-                    | I will be the leader of a company that ends up being worth billions of dollars, because I got the answers...
-                .tim-typo
-                  span.tim-note Primary Text
-                  p.text-primary
-                    | I will be the leader of a company that ends up being worth billions of dollars, because I got the answers...
-                .tim-typo
-                  span.tim-note Info Text
-                  p.text-info
-                    | I will be the leader of a company that ends up being worth billions of dollars, because I got the answers...
-                .tim-typo
-                  span.tim-note Success Text
-                  p.text-success
-                    | I will be the leader of a company that ends up being worth billions of dollars, because I got the answers...
-                .tim-typo
-                  span.tim-note Warning Text
-                  p.text-warning
-                    | I will be the leader of a company that ends up being worth billions of dollars, because I got the answers...
-                .tim-typo
-                  span.tim-note Danger Text
-                  p.text-danger
-                    | I will be the leader of a company that ends up being worth billions of dollars, because I got the answers...
-                .tim-typo
-                  h2
-                    span.tim-note Small Tag
-                    | Header with small subtitle 
-                    br
-                    small Use "small" tag for the headers
+<template>
+  <div class="content">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-header" data-background-color="purple"><h4 class="title">Material Dashboard Heading</h4>
+              <p class="category">Created using Roboto Font Family</p></div>
+            <div class="card-content">
+              <div id="typography">
+                <div class="title"><h2>Typography</h2></div>
+                <div class="row">
+                  <div class="tim-typo"><h1><span class="tim-note">Header 1</span>The Life of Material Dashboard</h1>
+                  </div>
+                  <div class="tim-typo"><h2><span class="tim-note">Header 2</span>The life of Material Dashboard</h2>
+                  </div>
+                  <div class="tim-typo"><h3><span class="tim-note">Header 3</span>The life of Material Dashboard</h3>
+                  </div>
+                  <div class="tim-typo"><h4><span class="tim-note">Header 4</span>The life of Material Dashboard</h4>
+                  </div>
+                  <div class="tim-typo"><h5><span class="tim-note">Header 5</span>The life of Material Dashboard</h5>
+                  </div>
+                  <div class="tim-typo"><h6><span class="tim-note">Header 6</span>The life of Material Dashboard</h6>
+                  </div>
+                  <div class="tim-typo"><p><span class="tim-note">Paragraph</span>I will be the leader of a company that
+                    ends up being worth billions of dollars, because I got the answers. I understand culture. I am the
+                    nucleus. I think that’s a responsibility that I have, to push possibilities, to show people, this is
+                    the level that things could be at.</p></div>
+                  <div class="tim-typo"><span class="tim-note">Quote</span>
+                    <md-blockquote author="Kanye West, Musician"
+                                   content="I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus. I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at."></md-blockquote>
+                  </div>
+                  <div class="tim-typo"><span class="tim-note">Muted Text</span>
+                    <p class="text-muted">
+                      I will be the leader of a company that ends up being worth billions of dollars,
+                      because I got the answers...</p></div>
+                  <div class="tim-typo"><span class="tim-note">Primary Text</span>
+                    <p class="text-primary">I will be the leader of a company that ends up being worth billions of
+                      dollars, because I got the answers...</p></div>
+                  <div class="tim-typo"><span class="tim-note">Info Text</span>
+                    <p class="text-info">I will be the leader of a company that ends up being worth billions of dollars,
+                      because I got the answers...</p></div>
+                  <div class="tim-typo"><span class="tim-note">Success Text</span>
+                    <p class="text-success">I will be the leader of a company that ends up being worth billions of
+                      dollars, because I got the answers...</p></div>
+                  <div class="tim-typo"><span class="tim-note">Warning Text</span>
+                    <p class="text-warning">I will be the leader of a company that ends up being worth billions of
+                      dollars, because I got the answers...</p></div>
+                  <div class="tim-typo"><span class="tim-note">Danger Text</span>
+                    <p class="text-danger">
+                      I will be the leader of a company that ends up being worth billions of dollars,
+                      because I got the answers...</p></div>
+                  <div class="tim-typo">
+                    <h2><span class="tim-note">Small Tag</span>Header with small subtitle<br/>
+                      <small>Use "small" tag for the headers</small>
+                    </h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
-export default {
-
-}
+  export default {}
 </script>
+
 <style lang="sass">
 
 </style>
