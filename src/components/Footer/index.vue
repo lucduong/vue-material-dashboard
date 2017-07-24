@@ -1,42 +1,35 @@
-<template lang="pug">
-footer.footer
-  .container-fluid
-    nav.pull-left
-      ul
-        li
-          a(href='#')
-            | Home
-        li
-          a(href='#')
-            | Company
-        li
-          a(href='#')
-            | Portfolio
-        li
-          a(href='#')
-            | Blog
-    p.copyright.pull-right
-      | © 
-      | {{year}}&nbsp;
-      | Crafted with&nbsp;
-      i.fa.fa-heart.heart
-      | &nbsp;by&nbsp;
-      a(href='https://github.com/lucduong') Luc Duong.&nbsp;
-      | Designed by&nbsp;
-      a(href='http://www.creative-tim.com') Creative Tim
+<template>
+  <footer class="footer">
+    <div class="container-fluid">
+      <nav class="pull-left">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Company</a></li>
+          <li><a href="#">Portfolio</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </nav>
+      <p class="copyright pull-right">©
+        {{year}}&nbsp;
+        Crafted with&nbsp;<i class="fa fa-heart heart"></i>&nbsp;by&nbsp;<a href="https://github.com/lucduong">Luc Duong.&nbsp;</a>Designed
+        by&nbsp;<a href="http://www.creative-tim.com">Creative Tim</a>
+      </p>
+    </div>
+  </footer>
 </template>
+
 <script>
-export default {
-  data() {
-    return {
-      year: new Date().getFullYear()
+  export default {
+    data() {
+      return {
+        year: new Date().getFullYear()
+      }
     }
   }
-}
 </script>
-<style lang="scss">
-.footer .heart {
-  color: #EB5E28;
-}
-</style>
 
+<style lang="scss">
+  .footer .heart {
+    color: #EB5E28;
+  }
+</style>

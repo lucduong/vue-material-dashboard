@@ -7,7 +7,6 @@ import Typography from '@/components/Typography'
 import Icons from '@/components/Icons'
 import Maps from '@/components/Maps'
 import Notifications from '@/components/Notifications'
-
 // GeneralViews
 import NotFound from '@/components/GeneralViews/NotFound.vue'
 
@@ -50,7 +49,7 @@ export default new Router({
       name: 'Notifications',
       component: Notifications
     },
-    { path: '*', component: NotFound }
+    {path: '*', component: NotFound}
   ],
   linkActiveClass: 'active'
 })
