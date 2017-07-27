@@ -16,6 +16,8 @@ Check the [LIVE DEMO HERE](http://vue-material-dashboard.ltv.vn/) or [HEROKU HER
 <img src="/static/vue-material-dashboard-1.png" alt="Screenshot">
 </p>
 
+## Notes
+
 ## Build Setup
 
 ``` bash
@@ -41,5 +43,15 @@ npm run e2e
 npm test
 ```
 
+Feel free to use `yarn` instead of `npm`.
+
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+## Notes
+The master branch is using `pug` engine. If you are looking for `html` version, please fetch the [HTML](https://github.com/lucduong/vue-material-dashboard/tree/html) branch.
+
+Special thanks to @[Nguyen San](https://github.com/sandangel) for this contribution.
+
+## Contributors
+@[Nguyen San](https://github.com/sandangel)
 
